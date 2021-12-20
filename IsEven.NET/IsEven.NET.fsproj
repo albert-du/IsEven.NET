@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+	<PackageId>IsEven.NET</PackageId>
+	<Version>0.1.0</Version>
+	<PackageTags></PackageTags>
+	<Authors>Albert Du</Authors>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<LangVersion>6.0</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="IsEven.fsi" />
+    <Compile Include="IsEven.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="6.0" />
+  </ItemGroup>
+
+</Project>
