@@ -1,0 +1,23 @@
+name: Publish
+
+on:
+  push:
+    branches: [ master ]
+    
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 6.0.x
+    - name: Build & Test
+      run: dotnet test --verbosity normal
+    - name: Release Build
+      run: dotnet build -c Release
+    - name: Publish
+      run: dotnet nuget push IsEven.NET/bin/Release/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }} --skip-duplicate
