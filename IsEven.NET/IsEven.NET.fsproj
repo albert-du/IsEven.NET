@@ -2,17 +2,18 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net6.0</TargetFrameworks>
-	<PackageId>IsEven.NET</PackageId>
-	<Version>0.1.0</Version>
-	<PackageTags></PackageTags>
-	<Authors>Albert Du</Authors>
+	  <PackageId>IsEven.NET</PackageId>
+    <Version>0.1.0</Version>
+    <PackageTags></PackageTags>
+    <Authors>Albert Du</Authors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	<LangVersion>6.0</LangVersion>
-	<Description>Tell if an integer is even.</Description>
-	<PackageProjectUrl>https://github.com/albert-du/IsEven.NET</PackageProjectUrl>
-	<RepositoryUrl>https://github.com/albert-du/IsEven.NET</RepositoryUrl>
-	<DefineConstants Condition="$(TargetFramework) == 'netstandard2.0'">$(DefineConstants);NETSTANDARD2_0</DefineConstants>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <LangVersion>6.0</LangVersion>
+    <Description>Tell if an integer is even.</Description>
+    <PackageProjectUrl>https://github.com/albert-du/IsEven.NET</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/albert-du/IsEven.NET</RepositoryUrl>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
+    <DefineConstants Condition="$(TargetFramework) == 'netstandard2.0'">$(DefineConstants);NETSTANDARD2_0</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
@@ -24,4 +25,7 @@
     <PackageReference Include="System.Text.Json" Version="6.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="..\readme.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
 </Project>
